@@ -1,0 +1,29 @@
+library ieee;
+use ieee.std_logic_1164.all;
+
+entity Generic_Mux is
+    generic (
+		  input_size: integer := 16;
+        mux_lines : integer := 2  -- Number of input lines (should be a power of 2)
+    );
+    port (
+        inputs : in std_logic_vector(mux_lines - 1 downto 0);
+        sel    : in std_logic_vector(integer(log2(real(mux_lines))) - 1 downto 0);
+        output : out std_logic
+    );
+end entity Generic_Mux;
+
+architecture Behavioral of Generic_Mux is
+begin
+    process (inputs, select)
+    begin
+        case select is
+            when "00" =>
+                output <= inputs(0);
+            -- Add cases for all input lines based on the select signal
+            -- For 4 inputs, cases would be "00", "01", "10", "11"
+            when others =>
+                output <= inputs(to_integer(unsigned(select)));
+        end case;
+    end process;
+end architecture Behavioral;

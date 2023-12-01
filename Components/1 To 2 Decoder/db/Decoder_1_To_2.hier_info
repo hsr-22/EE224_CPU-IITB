@@ -1,0 +1,7 @@
+|Decoder_1_To_2
+I => O[1].DATAIN
+I => O[0].DATAIN
+O[0] <= I.DB_MAX_OUTPUT_PORT_TYPE
+O[1] <= I.DB_MAX_OUTPUT_PORT_TYPE
+
+
