@@ -1,0 +1,27 @@
+|Left_Shifter
+input[0] => output[8].DATAIN
+input[1] => output[9].DATAIN
+input[2] => output[10].DATAIN
+input[3] => output[11].DATAIN
+input[4] => output[12].DATAIN
+input[5] => output[13].DATAIN
+input[6] => output[14].DATAIN
+input[7] => output[15].DATAIN
+output[0] <= <GND>
+output[1] <= <GND>
+output[2] <= <GND>
+output[3] <= <GND>
+output[4] <= <GND>
+output[5] <= <GND>
+output[6] <= <GND>
+output[7] <= <GND>
+output[8] <= input[0].DB_MAX_OUTPUT_PORT_TYPE
+output[9] <= input[1].DB_MAX_OUTPUT_PORT_TYPE
+output[10] <= input[2].DB_MAX_OUTPUT_PORT_TYPE
+output[11] <= input[3].DB_MAX_OUTPUT_PORT_TYPE
+output[12] <= input[4].DB_MAX_OUTPUT_PORT_TYPE
+output[13] <= input[5].DB_MAX_OUTPUT_PORT_TYPE
+output[14] <= input[6].DB_MAX_OUTPUT_PORT_TYPE
+output[15] <= input[7].DB_MAX_OUTPUT_PORT_TYPE
+
+
