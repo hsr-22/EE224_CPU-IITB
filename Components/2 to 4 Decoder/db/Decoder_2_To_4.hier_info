@@ -1,0 +1,15 @@
+|Decoder_2_To_4
+I[0] => O.IN0
+I[0] => O.IN0
+I[0] => O.IN0
+I[0] => O.IN0
+I[1] => O.IN1
+I[1] => O.IN1
+I[1] => O.IN1
+I[1] => O.IN1
+O[0] <= O.DB_MAX_OUTPUT_PORT_TYPE
+O[1] <= O.DB_MAX_OUTPUT_PORT_TYPE
+O[2] <= O.DB_MAX_OUTPUT_PORT_TYPE
+O[3] <= O.DB_MAX_OUTPUT_PORT_TYPE
+
+
