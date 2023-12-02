@@ -1,0 +1,119 @@
+# Reading C:/intelFPGA/18.1/modelsim_ase/tcl/vsim/pref.tcl
+# do DUT_run_msim_rtl_vhdl.do
+# if {[file exists rtl_work]} {
+# 	vdel -lib rtl_work -all
+# }
+# vlib rtl_work
+# vmap work rtl_work
+# Model Technology ModelSim - Intel FPGA Edition vmap 10.5b Lib Mapping Utility 2016.10 Oct  5 2016
+# vmap work rtl_work 
+# Copying C:/intelFPGA/18.1/modelsim_ase/win32aloem/../modelsim.ini to modelsim.ini
+# Modifying modelsim.ini
+# 
+# vcom -93 -work work {C:/Users/Lenovo/OneDrive/Documents/EE214_Digital_Lab/Test/Registers/Register.vhd}
+# Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 16:18:59 on Dec 01,2023
+# vcom -reportprogress 300 -93 -work work C:/Users/Lenovo/OneDrive/Documents/EE214_Digital_Lab/Test/Registers/Register.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity Register_N
+# -- Compiling architecture Behavioural of Register_N
+# End time: 16:18:59 on Dec 01,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vcom -93 -work work {C:/Users/Lenovo/OneDrive/Documents/EE214_Digital_Lab/Test/Registers/Testbench.vhd}
+# Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 16:18:59 on Dec 01,2023
+# vcom -reportprogress 300 -93 -work work C:/Users/Lenovo/OneDrive/Documents/EE214_Digital_Lab/Test/Registers/Testbench.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity Testbench
+# -- Compiling architecture Behave of Testbench
+# End time: 16:18:59 on Dec 01,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vcom -93 -work work {C:/Users/Lenovo/OneDrive/Documents/EE214_Digital_Lab/Test/Registers/DUT.vhd}
+# Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 16:19:00 on Dec 01,2023
+# vcom -reportprogress 300 -93 -work work C:/Users/Lenovo/OneDrive/Documents/EE214_Digital_Lab/Test/Registers/DUT.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity DUT
+# -- Compiling architecture DutWrap of DUT
+# End time: 16:19:00 on Dec 01,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vcom -93 -work work {C:/Users/Lenovo/OneDrive/Documents/EE214_Digital_Lab/Test/Registers/DUT_RF.vhd}
+# Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 16:19:00 on Dec 01,2023
+# vcom -reportprogress 300 -93 -work work C:/Users/Lenovo/OneDrive/Documents/EE214_Digital_Lab/Test/Registers/DUT_RF.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity DUT_RF
+# -- Compiling architecture DutWrap of DUT_RF
+# End time: 16:19:00 on Dec 01,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vcom -93 -work work {C:/Users/Lenovo/OneDrive/Documents/EE214_Digital_Lab/Test/Registers/Testbench_RF.vhd}
+# Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 16:19:00 on Dec 01,2023
+# vcom -reportprogress 300 -93 -work work C:/Users/Lenovo/OneDrive/Documents/EE214_Digital_Lab/Test/Registers/Testbench_RF.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity Testbench_RF
+# -- Compiling architecture Behave of Testbench_RF
+# End time: 16:19:00 on Dec 01,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vcom -93 -work work {C:/Users/Lenovo/OneDrive/Documents/EE214_Digital_Lab/Test/Registers/Programmer_Register.vhd}
+# Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 16:19:00 on Dec 01,2023
+# vcom -reportprogress 300 -93 -work work C:/Users/Lenovo/OneDrive/Documents/EE214_Digital_Lab/Test/Registers/Programmer_Register.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity Register_File
+# -- Compiling architecture Behavioural of Register_File
+# End time: 16:19:00 on Dec 01,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# 
+# vcom -93 -work work {C:/Users/Lenovo/OneDrive/Documents/EE214_Digital_Lab/Test/Registers/Testbench_RF.vhd}
+# Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 16:19:00 on Dec 01,2023
+# vcom -reportprogress 300 -93 -work work C:/Users/Lenovo/OneDrive/Documents/EE214_Digital_Lab/Test/Registers/Testbench_RF.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity Testbench_RF
+# -- Compiling architecture Behave of Testbench_RF
+# End time: 16:19:00 on Dec 01,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# 
+# vsim -t 1ps -L altera -L lpm -L sgate -L altera_mf -L altera_lnsim -L fiftyfivenm -L rtl_work -L work -voptargs="+acc"  Testbench_RF
+# vsim -t 1ps -L altera -L lpm -L sgate -L altera_mf -L altera_lnsim -L fiftyfivenm -L rtl_work -L work -voptargs=""+acc"" Testbench_RF 
+# Start time: 16:19:00 on Dec 01,2023
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading work.testbench_rf(behave)
+# Loading work.dut_rf(dutwrap)
+# Loading ieee.numeric_std(body)
+# Loading work.register_file(behavioural)
+# Loading work.register_n(behavioural)
+# 
+# add wave *
+# view structure
+# .main_pane.structure.interior.cs.body.struct
+# view signals
+# .main_pane.objects.interior.cs.body.tree
+# run -all
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 0  Instance: /testbench_rf/dut_instance/add_instance
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 0  Instance: /testbench_rf/dut_instance/add_instance
+# ** Note: SUCCESS, all tests passed.
+#    Time: 1824 ns  Iteration: 0  Instance: /testbench_rf
+# End time: 16:19:46 on Dec 01,2023, Elapsed time: 0:00:46
+# Errors: 0, Warnings: 2

@@ -1,0 +1,248 @@
+m255
+K4
+z2
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 dC:/Users/Lenovo/OneDrive/Documents/EE214_Digital_Lab/Test/Registers/simulation/modelsim
+Edut
+Z1 w1701422581
+Z2 DPx3 std 6 textio 0 22 zE1`LPoLg^DX3Oz^4Fj1K3
+Z3 DPx4 ieee 14 std_logic_1164 0 22 eNV`TJ_GofJTzYa?f<@Oe1
+R0
+Z4 8C:/Users/Lenovo/OneDrive/Documents/EE214_Digital_Lab/Test/Registers/DUT.vhd
+Z5 FC:/Users/Lenovo/OneDrive/Documents/EE214_Digital_Lab/Test/Registers/DUT.vhd
+l0
+L4
+VRJLoQKE6YD8VVbMn4hnF>3
+!s100 >9_UW8cPe_1g:cHBT]IQP3
+Z6 OV;C;10.5b;63
+31
+Z7 !s110 1701427740
+!i10b 1
+Z8 !s108 1701427740.000000
+Z9 !s90 -reportprogress|300|-93|-work|work|C:/Users/Lenovo/OneDrive/Documents/EE214_Digital_Lab/Test/Registers/DUT.vhd|
+Z10 !s107 C:/Users/Lenovo/OneDrive/Documents/EE214_Digital_Lab/Test/Registers/DUT.vhd|
+!i113 1
+Z11 o-93 -work work
+Z12 tExplicit 1 CvgOpt 0
+Adutwrap
+R2
+R3
+DEx4 work 3 dut 0 22 RJLoQKE6YD8VVbMn4hnF>3
+l18
+L9
+VNbZLQ^jeK8nX<mRd;>6BU1
+!s100 jz8_0V56XI<]A9321`MV`1
+R6
+31
+R7
+!i10b 1
+R8
+R9
+R10
+!i113 1
+R11
+R12
+Edut_rf
+Z13 w1701426938
+R2
+R3
+R0
+Z14 8C:/Users/Lenovo/OneDrive/Documents/EE214_Digital_Lab/Test/Registers/DUT_RF.vhd
+Z15 FC:/Users/Lenovo/OneDrive/Documents/EE214_Digital_Lab/Test/Registers/DUT_RF.vhd
+l0
+L4
+V9>`nfn0omVm1>HI1U<c0X1
+!s100 aHm8RbJ;c2XUBbEnNl;<[2
+R6
+31
+R7
+!i10b 1
+R8
+Z16 !s90 -reportprogress|300|-93|-work|work|C:/Users/Lenovo/OneDrive/Documents/EE214_Digital_Lab/Test/Registers/DUT_RF.vhd|
+Z17 !s107 C:/Users/Lenovo/OneDrive/Documents/EE214_Digital_Lab/Test/Registers/DUT_RF.vhd|
+!i113 1
+R11
+R12
+Adutwrap
+R2
+R3
+DEx4 work 6 dut_rf 0 22 9>`nfn0omVm1>HI1U<c0X1
+l16
+L9
+V;SP9nDAN<=bm9oYOjB_`c1
+!s100 4=^bJ0>z=<lJcginS^OeE3
+R6
+31
+R7
+!i10b 1
+R8
+R16
+R17
+!i113 1
+R11
+R12
+Eregister_file
+Z18 w1701427031
+Z19 DPx4 ieee 11 numeric_std 0 22 :ASDNFgHXf_ih3J@9F3Ze1
+R2
+R3
+R0
+Z20 8C:/Users/Lenovo/OneDrive/Documents/EE214_Digital_Lab/Test/Registers/Programmer_Register.vhd
+Z21 FC:/Users/Lenovo/OneDrive/Documents/EE214_Digital_Lab/Test/Registers/Programmer_Register.vhd
+l0
+L8
+VCDl2hIA36hD>lcDCn=8:72
+!s100 z?6RC45J>:?APd>XAbdlM2
+R6
+31
+R7
+!i10b 1
+R8
+Z22 !s90 -reportprogress|300|-93|-work|work|C:/Users/Lenovo/OneDrive/Documents/EE214_Digital_Lab/Test/Registers/Programmer_Register.vhd|
+Z23 !s107 C:/Users/Lenovo/OneDrive/Documents/EE214_Digital_Lab/Test/Registers/Programmer_Register.vhd|
+!i113 1
+R11
+R12
+Abehavioural
+R19
+R2
+R3
+DEx4 work 13 register_file 0 22 CDl2hIA36hD>lcDCn=8:72
+l30
+L15
+VmB9:B`3E?m177mT9A7J;02
+!s100 Og>a;Xc1iLS>SJ:=6GaI00
+R6
+31
+R7
+!i10b 1
+R8
+R22
+R23
+!i113 1
+R11
+R12
+Eregister_n
+Z24 w1701422613
+R19
+R2
+R3
+R0
+Z25 8C:/Users/Lenovo/OneDrive/Documents/EE214_Digital_Lab/Test/Registers/Register.vhd
+Z26 FC:/Users/Lenovo/OneDrive/Documents/EE214_Digital_Lab/Test/Registers/Register.vhd
+l0
+L6
+Vj<]QDXi<3ZnHUozVUeBf92
+!s100 I<Gja8KCDT[W2I7UHozz=2
+R6
+31
+Z27 !s110 1701427739
+!i10b 1
+Z28 !s108 1701427739.000000
+Z29 !s90 -reportprogress|300|-93|-work|work|C:/Users/Lenovo/OneDrive/Documents/EE214_Digital_Lab/Test/Registers/Register.vhd|
+Z30 !s107 C:/Users/Lenovo/OneDrive/Documents/EE214_Digital_Lab/Test/Registers/Register.vhd|
+!i113 1
+R11
+R12
+Abehavioural
+R19
+R2
+R3
+DEx4 work 10 register_n 0 22 j<]QDXi<3ZnHUozVUeBf92
+l17
+L15
+V3dnS[nKR@dY?6?okgz;`U2
+!s100 A;R[O6Y4ccz0X<jH[[hf42
+R6
+31
+R27
+!i10b 1
+R28
+R29
+R30
+!i113 1
+R11
+R12
+Etestbench
+Z31 w1701422408
+R3
+R2
+R0
+Z32 8C:/Users/Lenovo/OneDrive/Documents/EE214_Digital_Lab/Test/Registers/Testbench.vhd
+Z33 FC:/Users/Lenovo/OneDrive/Documents/EE214_Digital_Lab/Test/Registers/Testbench.vhd
+l0
+L7
+V]iKK_Z9L:G9B:i8c]3eFH0
+!s100 bWf8kl8zb90X@P1m>V^K20
+R6
+31
+R27
+!i10b 1
+R28
+Z34 !s90 -reportprogress|300|-93|-work|work|C:/Users/Lenovo/OneDrive/Documents/EE214_Digital_Lab/Test/Registers/Testbench.vhd|
+Z35 !s107 C:/Users/Lenovo/OneDrive/Documents/EE214_Digital_Lab/Test/Registers/Testbench.vhd|
+!i113 1
+R11
+R12
+Abehave
+R3
+R2
+DEx4 work 9 testbench 0 22 ]iKK_Z9L:G9B:i8c]3eFH0
+l69
+L9
+V<3Ui;n]c<H7>Diej7G9@^1
+!s100 K4?IhS8K=ha:XjMR3aG:S2
+R6
+31
+R27
+!i10b 1
+R28
+R34
+R35
+!i113 1
+R11
+R12
+Etestbench_rf
+Z36 w1701427156
+R3
+R2
+R0
+Z37 8C:/Users/Lenovo/OneDrive/Documents/EE214_Digital_Lab/Test/Registers/Testbench_RF.vhd
+Z38 FC:/Users/Lenovo/OneDrive/Documents/EE214_Digital_Lab/Test/Registers/Testbench_RF.vhd
+l0
+L7
+VV^z3=G2DB<MDOoiYIR1?72
+!s100 P2Jna@30C9K2;ZYo]3;EB0
+R6
+31
+R7
+!i10b 1
+R8
+Z39 !s90 -reportprogress|300|-93|-work|work|C:/Users/Lenovo/OneDrive/Documents/EE214_Digital_Lab/Test/Registers/Testbench_RF.vhd|
+Z40 !s107 C:/Users/Lenovo/OneDrive/Documents/EE214_Digital_Lab/Test/Registers/Testbench_RF.vhd|
+!i113 1
+R11
+R12
+Abehave
+R3
+R2
+Z41 DEx4 work 12 testbench_rf 0 22 V^z3=G2DB<MDOoiYIR1?72
+l69
+L9
+Z42 V]KAJ`f;C8^o;ZQPU_adh<1
+Z43 !s100 ADI4ahjY41Vh_A?6f@Ik53
+R6
+31
+R7
+!i10b 1
+R8
+R39
+R40
+!i113 1
+R11
+R12
