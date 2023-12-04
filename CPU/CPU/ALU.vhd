@@ -32,7 +32,7 @@ begin
 				when "00" => temp_result := signed(A) + signed(B);
 				when "01" => temp_result := signed(A) - signed(B);
 			-- when "10" => temp_result := signed(A) + signed(B);
-				when "11" => temp_result := resize(signed(A) * signed(B),16);
+				when "11" => temp_result := resize(signed(A(3 downto 0)) * signed(B(3 downto 0)),16);
 				when others => temp_result := signed(A); 
 			end case;
        

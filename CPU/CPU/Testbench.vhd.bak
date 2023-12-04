@@ -1,0 +1,7 @@
+entity Testbench is
+end entity;
+
+architecture Behavioural of Testbench is
+	signal clk : std_logic := '0';
+begin
+end;

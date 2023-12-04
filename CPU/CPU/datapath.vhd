@@ -4,6 +4,7 @@ use ieee.std_logic_1164.all;
 entity datapath is
 	port( clk,reset: in std_logic;
 			state: in std_logic_vector(3 downto 0);
+			opcode_out: out std_logic_vector(3 downto 0);
 			z_in: out std_logic);
 end entity;
 
@@ -87,7 +88,16 @@ architecture path of datapath is
 	signal i_se6: std_logic_vector(5 downto 0);
 	signal i_se9: std_logic_vector(8 downto 0);
 	signal o_de38: std_logic_vector(7 downto 0);
-	signal o_se9,i_ls,o_se6, i_reg16,i_reg16_2,i_reg16_3,i_reg16_4, o_reg16,o_reg16_2,o_reg16_3,o_reg16_4,o_ls,i_rfd3,o_rfd1,o_rfd2,alu_a,alu_b,alu_c,mem_addr,mem_in,mem_out: std_logic_vector(15 downto 0);
+	
+	signal o_se9,i_ls,o_se6,o_ls,i_rfd3,o_rfd1,o_rfd2: std_logic_vector(15 downto 0);
+	
+	-- 16-bit Temp Registers
+	signal i_reg16,i_reg16_2,i_reg16_3,i_reg16_4, o_reg16,o_reg16_2,o_reg16_3,o_reg16_4: std_logic_vector(15 downto 0);
+	-- 16-bit ALU signals
+	signal alu_a,alu_b,alu_c: std_logic_vector(15 downto 0);
+	-- 16-bit Memory signals
+	signal mem_addr,mem_in,mem_out: std_logic_vector(15 downto 0);
+	
 	signal i_reg3,o_reg3,i_de38,i_rfa3,i_rfa2,i_rfa1,alu_op: std_logic_vector(2 downto 0);
 	signal o_de24: std_logic_vector(3 downto 0);
 	signal o_de12,i_de24: std_logic_vector(1 downto 0);
@@ -138,8 +148,10 @@ architecture path of datapath is
 		
 		mem: component Memory
 			port map(clk, m_wr, m_rd, mem_addr, mem_in, mem_out);
+			
+		opcode_out <= o_reg16(15 downto 12) when state /= s0 else mem_out(15 downto 12);
 		
-		datapath_process: process(state)
+		datapath_process: process(state,o_rfd1,o_rfd2,mem_out,alu_c,alu_z,o_reg16,o_reg16_2,o_reg16_3,o_reg16_4,o_se6,o_se9,o_ls)
 		begin
 			i_se6 <= (others => '0');
 			i_ls <= (others => '0');
@@ -168,7 +180,7 @@ architecture path of datapath is
 					
 					wenable_rf <= '1';
 					wenable_reg3 <= '0';
-					wenable_reg16 <= '0';
+					wenable_reg16 <= '1';
 					wenable_reg16_2 <= '0';
 					wenable_reg16_3 <= '0';
 					wenable_reg16_4 <= '0';
@@ -209,7 +221,7 @@ architecture path of datapath is
 					alu_op <= o_reg16(14 downto 12);
 				
 				when s3 =>
-					i_rfa3 <= o_reg16(5 downto 3);
+					i_rfa3 <= o_reg3;
 					i_rfd3 <= o_reg16_4;
 			
 					wenable_rf <= '1';

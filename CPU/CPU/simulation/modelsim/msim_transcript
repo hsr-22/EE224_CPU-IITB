@@ -1,0 +1,308 @@
+# Reading C:/intelFPGA/18.1/modelsim_ase/tcl/vsim/pref.tcl
+# do CPU_run_msim_rtl_vhdl.do
+# if {[file exists rtl_work]} {
+# 	vdel -lib rtl_work -all
+# }
+# vlib rtl_work
+# vmap work rtl_work
+# Model Technology ModelSim - Intel FPGA Edition vmap 10.5b Lib Mapping Utility 2016.10 Oct  5 2016
+# vmap work rtl_work 
+# Copying C:/intelFPGA/18.1/modelsim_ase/win32aloem/../modelsim.ini to modelsim.ini
+# Modifying modelsim.ini
+# 
+# vcom -93 -work work {C:/Users/Lenovo/OneDrive/Documents/EE214_Digital_Lab/Test/EE224_CPU-IITB/CPU/CPU/Signed_Extender.vhd}
+# Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 10:38:02 on Dec 04,2023
+# vcom -reportprogress 300 -93 -work work C:/Users/Lenovo/OneDrive/Documents/EE214_Digital_Lab/Test/EE224_CPU-IITB/CPU/CPU/Signed_Extender.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity Signed_Extender
+# -- Compiling architecture Struct of Signed_Extender
+# End time: 10:38:02 on Dec 04,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vcom -93 -work work {C:/Users/Lenovo/OneDrive/Documents/EE214_Digital_Lab/Test/EE224_CPU-IITB/CPU/CPU/Register.vhd}
+# Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 10:38:02 on Dec 04,2023
+# vcom -reportprogress 300 -93 -work work C:/Users/Lenovo/OneDrive/Documents/EE214_Digital_Lab/Test/EE224_CPU-IITB/CPU/CPU/Register.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity Register_N
+# -- Compiling architecture Behavioural of Register_N
+# End time: 10:38:02 on Dec 04,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vcom -93 -work work {C:/Users/Lenovo/OneDrive/Documents/EE214_Digital_Lab/Test/EE224_CPU-IITB/CPU/CPU/Memory.vhd}
+# Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 10:38:02 on Dec 04,2023
+# vcom -reportprogress 300 -93 -work work C:/Users/Lenovo/OneDrive/Documents/EE214_Digital_Lab/Test/EE224_CPU-IITB/CPU/CPU/Memory.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity Memory
+# -- Compiling architecture Behavioural of Memory
+# End time: 10:38:02 on Dec 04,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vcom -93 -work work {C:/Users/Lenovo/OneDrive/Documents/EE214_Digital_Lab/Test/EE224_CPU-IITB/CPU/CPU/Left_Shifter.vhd}
+# Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 10:38:02 on Dec 04,2023
+# vcom -reportprogress 300 -93 -work work C:/Users/Lenovo/OneDrive/Documents/EE214_Digital_Lab/Test/EE224_CPU-IITB/CPU/CPU/Left_Shifter.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity Left_Shifter
+# -- Compiling architecture Struct of Left_Shifter
+# End time: 10:38:02 on Dec 04,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vcom -93 -work work {C:/Users/Lenovo/OneDrive/Documents/EE214_Digital_Lab/Test/EE224_CPU-IITB/CPU/CPU/Generic_Mux.vhd}
+# Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 10:38:02 on Dec 04,2023
+# vcom -reportprogress 300 -93 -work work C:/Users/Lenovo/OneDrive/Documents/EE214_Digital_Lab/Test/EE224_CPU-IITB/CPU/CPU/Generic_Mux.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling package mux_p
+# -- Compiling package body mux_p
+# -- Loading package mux_p
+# -- Loading package NUMERIC_STD
+# -- Loading package mux_p
+# -- Compiling entity N_Sel_Mux
+# -- Compiling architecture syn of N_Sel_Mux
+# End time: 10:38:02 on Dec 04,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vcom -93 -work work {C:/Users/Lenovo/OneDrive/Documents/EE214_Digital_Lab/Test/EE224_CPU-IITB/CPU/CPU/FSM.vhd}
+# Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 10:38:03 on Dec 04,2023
+# vcom -reportprogress 300 -93 -work work C:/Users/Lenovo/OneDrive/Documents/EE214_Digital_Lab/Test/EE224_CPU-IITB/CPU/CPU/FSM.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity FSM
+# -- Compiling architecture control of FSM
+# End time: 10:38:03 on Dec 04,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vcom -93 -work work {C:/Users/Lenovo/OneDrive/Documents/EE214_Digital_Lab/Test/EE224_CPU-IITB/CPU/CPU/Decoder_3_To_8.vhdl}
+# Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 10:38:03 on Dec 04,2023
+# vcom -reportprogress 300 -93 -work work C:/Users/Lenovo/OneDrive/Documents/EE214_Digital_Lab/Test/EE224_CPU-IITB/CPU/CPU/Decoder_3_To_8.vhdl 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity Decoder_3_To_8
+# -- Compiling architecture dec of Decoder_3_To_8
+# End time: 10:38:03 on Dec 04,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vcom -93 -work work {C:/Users/Lenovo/OneDrive/Documents/EE214_Digital_Lab/Test/EE224_CPU-IITB/CPU/CPU/Decoder_2_To_4.vhdl}
+# Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 10:38:03 on Dec 04,2023
+# vcom -reportprogress 300 -93 -work work C:/Users/Lenovo/OneDrive/Documents/EE214_Digital_Lab/Test/EE224_CPU-IITB/CPU/CPU/Decoder_2_To_4.vhdl 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity Decoder_2_To_4
+# -- Compiling architecture dec of Decoder_2_To_4
+# End time: 10:38:03 on Dec 04,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vcom -93 -work work {C:/Users/Lenovo/OneDrive/Documents/EE214_Digital_Lab/Test/EE224_CPU-IITB/CPU/CPU/Decoder_1_To_2.vhdl}
+# Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 10:38:03 on Dec 04,2023
+# vcom -reportprogress 300 -93 -work work C:/Users/Lenovo/OneDrive/Documents/EE214_Digital_Lab/Test/EE224_CPU-IITB/CPU/CPU/Decoder_1_To_2.vhdl 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity Decoder_1_To_2
+# -- Compiling architecture dec of Decoder_1_To_2
+# End time: 10:38:03 on Dec 04,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vcom -93 -work work {C:/Users/Lenovo/OneDrive/Documents/EE214_Digital_Lab/Test/EE224_CPU-IITB/CPU/CPU/datapath.vhd}
+# Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 10:38:03 on Dec 04,2023
+# vcom -reportprogress 300 -93 -work work C:/Users/Lenovo/OneDrive/Documents/EE214_Digital_Lab/Test/EE224_CPU-IITB/CPU/CPU/datapath.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity datapath
+# -- Compiling architecture path of datapath
+# End time: 10:38:03 on Dec 04,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vcom -93 -work work {C:/Users/Lenovo/OneDrive/Documents/EE214_Digital_Lab/Test/EE224_CPU-IITB/CPU/CPU/ALU.vhd}
+# Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 10:38:03 on Dec 04,2023
+# vcom -reportprogress 300 -93 -work work C:/Users/Lenovo/OneDrive/Documents/EE214_Digital_Lab/Test/EE224_CPU-IITB/CPU/CPU/ALU.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity ALU
+# -- Compiling architecture Struct of ALU
+# End time: 10:38:03 on Dec 04,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vcom -93 -work work {C:/Users/Lenovo/OneDrive/Documents/EE214_Digital_Lab/Test/EE224_CPU-IITB/CPU/CPU/CPU.vhd}
+# Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 10:38:03 on Dec 04,2023
+# vcom -reportprogress 300 -93 -work work C:/Users/Lenovo/OneDrive/Documents/EE214_Digital_Lab/Test/EE224_CPU-IITB/CPU/CPU/CPU.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity CPU
+# -- Compiling architecture iitb_cpu of CPU
+# End time: 10:38:03 on Dec 04,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vcom -93 -work work {C:/Users/Lenovo/OneDrive/Documents/EE214_Digital_Lab/Test/EE224_CPU-IITB/CPU/CPU/Testbench.vhd}
+# Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 10:38:03 on Dec 04,2023
+# vcom -reportprogress 300 -93 -work work C:/Users/Lenovo/OneDrive/Documents/EE214_Digital_Lab/Test/EE224_CPU-IITB/CPU/CPU/Testbench.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity Testbench
+# -- Compiling architecture Behavioural of Testbench
+# End time: 10:38:03 on Dec 04,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vcom -93 -work work {C:/Users/Lenovo/OneDrive/Documents/EE214_Digital_Lab/Test/EE224_CPU-IITB/CPU/CPU/Programmer_Register.vhd}
+# Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 10:38:03 on Dec 04,2023
+# vcom -reportprogress 300 -93 -work work C:/Users/Lenovo/OneDrive/Documents/EE214_Digital_Lab/Test/EE224_CPU-IITB/CPU/CPU/Programmer_Register.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity Register_File
+# -- Compiling architecture Behavioural of Register_File
+# End time: 10:38:03 on Dec 04,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# 
+# vcom -93 -work work {C:/Users/Lenovo/OneDrive/Documents/EE214_Digital_Lab/Test/EE224_CPU-IITB/CPU/CPU/Testbench.vhd}
+# Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 10:38:03 on Dec 04,2023
+# vcom -reportprogress 300 -93 -work work C:/Users/Lenovo/OneDrive/Documents/EE214_Digital_Lab/Test/EE224_CPU-IITB/CPU/CPU/Testbench.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity Testbench
+# -- Compiling architecture Behavioural of Testbench
+# End time: 10:38:03 on Dec 04,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# 
+# vsim -t 1ps -L altera -L lpm -L sgate -L altera_mf -L altera_lnsim -L fiftyfivenm -L rtl_work -L work -voptargs="+acc"  Testbench
+# vsim -t 1ps -L altera -L lpm -L sgate -L altera_mf -L altera_lnsim -L fiftyfivenm -L rtl_work -L work -voptargs=""+acc"" Testbench 
+# Start time: 10:38:03 on Dec 04,2023
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading work.testbench(behavioural)
+# Loading work.cpu(iitb_cpu)
+# Loading work.datapath(path)
+# Loading work.signed_extender(struct)
+# Loading ieee.numeric_std(body)
+# Loading work.register_n(behavioural)
+# Loading work.decoder_3_to_8(dec)
+# Loading work.decoder_2_to_4(dec)
+# Loading work.decoder_1_to_2(dec)
+# Loading work.left_shifter(struct)
+# Loading work.register_file(behavioural)
+# Loading work.alu(struct)
+# Loading work.memory(behavioural)
+# Loading work.fsm(control)
+# 
+# add wave *
+# view structure
+# .main_pane.structure.interior.cs.body.struct
+# view signals
+# .main_pane.objects.interior.cs.body.tree
+# run -all
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 0  Instance: /testbench/CPU_instance/path_of_data/rf
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 0  Instance: /testbench/CPU_instance/path_of_data/rf
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 0 ps  Iteration: 2  Instance: /testbench/CPU_instance/path_of_data/mem
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 2  Instance: /testbench/CPU_instance/path_of_data/mem
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 2  Instance: /testbench/CPU_instance/path_of_data/mem
+do wave.do
+restart
+run -all
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 0  Instance: /testbench/CPU_instance/path_of_data/rf
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 0  Instance: /testbench/CPU_instance/path_of_data/rf
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 0 ps  Iteration: 2  Instance: /testbench/CPU_instance/path_of_data/mem
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 2  Instance: /testbench/CPU_instance/path_of_data/mem
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 2  Instance: /testbench/CPU_instance/path_of_data/mem
+add wave -position insertpoint  \
+sim:/testbench/CPU_instance/path_of_data/reg16_t1/input \
+sim:/testbench/CPU_instance/path_of_data/reg16_t1/w_enable \
+sim:/testbench/CPU_instance/path_of_data/reg16_t1/output
+add wave -position insertpoint  \
+sim:/testbench/CPU_instance/path_of_data/reg16_t2/input \
+sim:/testbench/CPU_instance/path_of_data/reg16_t2/w_enable \
+sim:/testbench/CPU_instance/path_of_data/reg16_t2/output
+add wave -position insertpoint  \
+sim:/testbench/CPU_instance/path_of_data/reg16_t3/input \
+sim:/testbench/CPU_instance/path_of_data/reg16_t3/w_enable \
+sim:/testbench/CPU_instance/path_of_data/reg16_t3/output
+add wave -position insertpoint  \
+sim:/testbench/CPU_instance/path_of_data/reg16_t4/input \
+sim:/testbench/CPU_instance/path_of_data/reg16_t4/w_enable \
+sim:/testbench/CPU_instance/path_of_data/reg16_t4/output
+add wave -position insertpoint  \
+sim:/testbench/CPU_instance/path_of_data/reg3/input \
+sim:/testbench/CPU_instance/path_of_data/reg3/w_enable \
+sim:/testbench/CPU_instance/path_of_data/reg3/output
+write format wave -window .main_pane.wave.interior.cs.body.pw.wf C:/Users/Lenovo/OneDrive/Documents/EE214_Digital_Lab/Test/EE224_CPU-IITB/CPU/CPU/simulation/modelsim/wave.do
+add wave -position insertpoint  \
+sim:/testbench/CPU_instance/path_of_data/state
+write format wave -window .main_pane.wave.interior.cs.body.pw.wf C:/Users/Lenovo/OneDrive/Documents/EE214_Digital_Lab/Test/EE224_CPU-IITB/CPU/CPU/simulation/modelsim/wave.do
+add wave -position insertpoint  \
+sim:/testbench/CPU_instance/path_of_data/alucomp/B \
+sim:/testbench/CPU_instance/path_of_data/alucomp/opcode \
+sim:/testbench/CPU_instance/path_of_data/alucomp/A \
+sim:/testbench/CPU_instance/path_of_data/alucomp/result \
+sim:/testbench/CPU_instance/path_of_data/alucomp/z_flag \
+sim:/testbench/CPU_instance/path_of_data/alucomp/C
+write format wave -window .main_pane.wave.interior.cs.body.pw.wf C:/Users/Lenovo/OneDrive/Documents/EE214_Digital_Lab/Test/EE224_CPU-IITB/CPU/CPU/simulation/modelsim/wave.do
+restart
+run -all
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 0  Instance: /testbench/CPU_instance/path_of_data/rf
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 0  Instance: /testbench/CPU_instance/path_of_data/rf
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 0 ps  Iteration: 2  Instance: /testbench/CPU_instance/path_of_data/mem
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 2  Instance: /testbench/CPU_instance/path_of_data/mem
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 2  Instance: /testbench/CPU_instance/path_of_data/mem
+add wave -position insertpoint  \
+sim:/testbench/CPU_instance/path_of_data/mem/m_wr \
+sim:/testbench/CPU_instance/path_of_data/mem/m_rd \
+sim:/testbench/CPU_instance/path_of_data/mem/mem_addr \
+sim:/testbench/CPU_instance/path_of_data/mem/mem_in \
+sim:/testbench/CPU_instance/path_of_data/mem/mem_vals \
+sim:/testbench/CPU_instance/path_of_data/mem/mem_out
+# (vsim-4077) Logging very large object: /testbench/CPU_instance/path_of_data/mem/mem_vals 
+write format wave -window .main_pane.wave.interior.cs.body.pw.wf C:/Users/Lenovo/OneDrive/Documents/EE214_Digital_Lab/Test/EE224_CPU-IITB/CPU/CPU/simulation/modelsim/wave.do
+restart
+run -all
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 0  Instance: /testbench/CPU_instance/path_of_data/rf
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 0  Instance: /testbench/CPU_instance/path_of_data/rf
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 0 ps  Iteration: 2  Instance: /testbench/CPU_instance/path_of_data/mem
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 2  Instance: /testbench/CPU_instance/path_of_data/mem
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 2  Instance: /testbench/CPU_instance/path_of_data/mem
+write format wave -window .main_pane.wave.interior.cs.body.pw.wf C:/Users/Lenovo/OneDrive/Documents/EE214_Digital_Lab/Test/EE224_CPU-IITB/CPU/CPU/simulation/modelsim/wave.do
+# End time: 11:06:40 on Dec 04,2023, Elapsed time: 0:28:37
+# Errors: 0, Warnings: 20
