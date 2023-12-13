@@ -8,6 +8,7 @@ This project has been done as part of the course **Digital Systems** at IIT Bomb
 - Dattaraj Salunkhe
 - Aaditya Gupta
 
-[Link to Project Specifications]()
+[Link to Project Specifications](/EE-224-Project-1-CPU-IITB.pdf)
 
-[Link to Project Report]()
+[Link to Project Report](/Report/Report_Team16_EE224_final.pdf)
+
