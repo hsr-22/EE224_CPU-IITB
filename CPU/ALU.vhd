@@ -11,9 +11,9 @@ end entity ALU;
 
 	-------------------------------------------------------
 	-- 000: ADD
-	-- 001: SUB
+	-- 010: SUB
 	-- 011: MUL
-	-- 010: ? (ADI)
+	-- 001: ? (ADI)
 	-- 100: AND
 	-- 101: ORA
 	-- 110: IMP
@@ -30,7 +30,7 @@ begin
 		if(opcode(2) = '0') then
 			case opcode(1 downto 0) is
 				when "00" => temp_result := signed(A) + signed(B);
-				when "01" => temp_result := signed(A) - signed(B);
+				when "10" => temp_result := signed(A) - signed(B);
 			-- when "10" => temp_result := signed(A) + signed(B);
 				when "11" => temp_result := resize(signed(A(3 downto 0)) * signed(B(3 downto 0)),16);
 				when others => temp_result := signed(A); 

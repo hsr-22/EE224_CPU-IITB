@@ -7,26 +7,26 @@ z2
 !i10e 25
 !i10f 100
 cModel Technology
-Z0 dC:/Users/harsh/GitHub Desktop/EE224_CPU-IITB/CPU/CPU/simulation/modelsim
+Z0 dC:/Users/PRANAV PRAKASH/Projects/EE224_CPU-IITB/CPU/simulation/modelsim
 Ealu
-Z1 w1701680679
+Z1 w1705143808
 Z2 DPx4 ieee 11 numeric_std 0 22 :ASDNFgHXf_ih3J@9F3Ze1
 Z3 DPx3 std 6 textio 0 22 zE1`LPoLg^DX3Oz^4Fj1K3
 Z4 DPx4 ieee 14 std_logic_1164 0 22 eNV`TJ_GofJTzYa?f<@Oe1
 R0
-Z5 8C:/Users/harsh/GitHub Desktop/EE224_CPU-IITB/CPU/CPU/ALU.vhd
-Z6 FC:/Users/harsh/GitHub Desktop/EE224_CPU-IITB/CPU/CPU/ALU.vhd
+Z5 8C:/Users/PRANAV PRAKASH/Projects/EE224_CPU-IITB/CPU/ALU.vhd
+Z6 FC:/Users/PRANAV PRAKASH/Projects/EE224_CPU-IITB/CPU/ALU.vhd
 l0
 L5
 VjfSL_4D7[W`H0`>cg0?aC0
 !s100 aFk8YRgg`TzCLNaJiczZZ1
 Z7 OV;C;10.5b;63
 31
-Z8 !s110 1701695860
+Z8 !s110 1705145519
 !i10b 1
-Z9 !s108 1701695860.000000
-Z10 !s90 -reportprogress|300|-93|-work|work|C:/Users/harsh/GitHub Desktop/EE224_CPU-IITB/CPU/CPU/ALU.vhd|
-Z11 !s107 C:/Users/harsh/GitHub Desktop/EE224_CPU-IITB/CPU/CPU/ALU.vhd|
+Z9 !s108 1705145519.000000
+Z10 !s90 -reportprogress|300|-93|-work|work|C:/Users/PRANAV PRAKASH/Projects/EE224_CPU-IITB/CPU/ALU.vhd|
+Z11 !s107 C:/Users/PRANAV PRAKASH/Projects/EE224_CPU-IITB/CPU/ALU.vhd|
 !i113 1
 Z12 o-93 -work work
 Z13 tExplicit 1 CvgOpt 0
@@ -37,8 +37,8 @@ R4
 DEx4 work 3 alu 0 22 jfSL_4D7[W`H0`>cg0?aC0
 l26
 L24
-VomNQX`GeMKfY>lGjWBU3O0
-!s100 EZKeTG^NbIjA??86ozk7;2
+Vb^J6hENch>hnL`=zJhiz>0
+!s100 <EHB09eU_5<SVi<RS6d:P2
 R7
 31
 R8
@@ -50,12 +50,12 @@ R11
 R12
 R13
 Ecpu
-R1
+Z14 w1705140080
 R3
 R4
 R0
-Z14 8C:/Users/harsh/GitHub Desktop/EE224_CPU-IITB/CPU/CPU/CPU.vhd
-Z15 FC:/Users/harsh/GitHub Desktop/EE224_CPU-IITB/CPU/CPU/CPU.vhd
+Z15 8C:/Users/PRANAV PRAKASH/Projects/EE224_CPU-IITB/CPU/CPU.vhd
+Z16 FC:/Users/PRANAV PRAKASH/Projects/EE224_CPU-IITB/CPU/CPU.vhd
 l0
 L4
 V0DS5D0le]e5QdCH0L_mb`3
@@ -65,8 +65,8 @@ R7
 R8
 !i10b 1
 R9
-Z16 !s90 -reportprogress|300|-93|-work|work|C:/Users/harsh/GitHub Desktop/EE224_CPU-IITB/CPU/CPU/CPU.vhd|
-Z17 !s107 C:/Users/harsh/GitHub Desktop/EE224_CPU-IITB/CPU/CPU/CPU.vhd|
+Z17 !s90 -reportprogress|300|-93|-work|work|C:/Users/PRANAV PRAKASH/Projects/EE224_CPU-IITB/CPU/CPU.vhd|
+Z18 !s107 C:/Users/PRANAV PRAKASH/Projects/EE224_CPU-IITB/CPU/CPU.vhd|
 !i113 1
 R12
 R13
@@ -83,29 +83,29 @@ R7
 R8
 !i10b 1
 R9
-R16
 R17
+R18
 !i113 1
 R12
 R13
 Edatapath
-R1
+Z19 w1705144930
 R3
 R4
 R0
-Z18 8C:/Users/harsh/GitHub Desktop/EE224_CPU-IITB/CPU/CPU/datapath.vhd
-Z19 FC:/Users/harsh/GitHub Desktop/EE224_CPU-IITB/CPU/CPU/datapath.vhd
+Z20 8C:/Users/PRANAV PRAKASH/Projects/EE224_CPU-IITB/CPU/datapath.vhd
+Z21 FC:/Users/PRANAV PRAKASH/Projects/EE224_CPU-IITB/CPU/datapath.vhd
 l0
 L4
 Vg`4eBIi?Hl^A]:7LF5ojl0
 !s100 Pz@iU=HYL4[Cc9QYnf^o;0
 R7
 31
-Z20 !s110 1701695859
+Z22 !s110 1705145518
 !i10b 1
-Z21 !s108 1701695858.000000
-Z22 !s90 -reportprogress|300|-93|-work|work|C:/Users/harsh/GitHub Desktop/EE224_CPU-IITB/CPU/CPU/datapath.vhd|
-Z23 !s107 C:/Users/harsh/GitHub Desktop/EE224_CPU-IITB/CPU/CPU/datapath.vhd|
+Z23 !s108 1705145518.000000
+Z24 !s90 -reportprogress|300|-93|-work|work|C:/Users/PRANAV PRAKASH/Projects/EE224_CPU-IITB/CPU/datapath.vhd|
+Z25 !s107 C:/Users/PRANAV PRAKASH/Projects/EE224_CPU-IITB/CPU/datapath.vhd|
 !i113 1
 R12
 R13
@@ -113,38 +113,38 @@ Apath
 R3
 R4
 DEx4 work 8 datapath 0 22 g`4eBIi?Hl^A]:7LF5ojl0
-l106
+l122
 L11
-VDKjV5_k9=YL5WZ9BfM@o42
-!s100 kQ;gBfIX8mAPfR@4Tb^N33
+V5JXF]m]`W21=Mfa1Y9_g83
+!s100 701aK8<W9zhLo5hmfJh5H1
 R7
 31
-R20
-!i10b 1
-R21
 R22
+!i10b 1
 R23
+R24
+R25
 !i113 1
 R12
 R13
 Edecoder_1_to_2
-R1
+Z26 w1705001338
 R3
 R4
 R0
-Z24 8C:/Users/harsh/GitHub Desktop/EE224_CPU-IITB/CPU/CPU/Decoder_1_To_2.vhdl
-Z25 FC:/Users/harsh/GitHub Desktop/EE224_CPU-IITB/CPU/CPU/Decoder_1_To_2.vhdl
+Z27 8C:/Users/PRANAV PRAKASH/Projects/EE224_CPU-IITB/CPU/Decoder_1_To_2.vhdl
+Z28 FC:/Users/PRANAV PRAKASH/Projects/EE224_CPU-IITB/CPU/Decoder_1_To_2.vhdl
 l0
 L4
 VTf8R_BOS<ZF<@WVAaEXC61
 !s100 2WeII^`aKnb`4=;[B<KWZ3
 R7
 31
-Z26 !s110 1701695857
+R22
 !i10b 1
-Z27 !s108 1701695857.000000
-Z28 !s90 -reportprogress|300|-93|-work|work|C:/Users/harsh/GitHub Desktop/EE224_CPU-IITB/CPU/CPU/Decoder_1_To_2.vhdl|
-Z29 !s107 C:/Users/harsh/GitHub Desktop/EE224_CPU-IITB/CPU/CPU/Decoder_1_To_2.vhdl|
+R23
+Z29 !s90 -reportprogress|300|-93|-work|work|C:/Users/PRANAV PRAKASH/Projects/EE224_CPU-IITB/CPU/Decoder_1_To_2.vhdl|
+Z30 !s107 C:/Users/PRANAV PRAKASH/Projects/EE224_CPU-IITB/CPU/Decoder_1_To_2.vhdl|
 !i113 1
 R12
 R13
@@ -158,32 +158,32 @@ VH?Q`[61Kn^fVKane8LM:L0
 !s100 LRC^Z7185SF2`ZWb>dM402
 R7
 31
-R26
+R22
 !i10b 1
-R27
-R28
+R23
 R29
+R30
 !i113 1
 R12
 R13
 Edecoder_2_to_4
-R1
+R26
 R3
 R4
 R0
-Z30 8C:/Users/harsh/GitHub Desktop/EE224_CPU-IITB/CPU/CPU/Decoder_2_To_4.vhdl
-Z31 FC:/Users/harsh/GitHub Desktop/EE224_CPU-IITB/CPU/CPU/Decoder_2_To_4.vhdl
+Z31 8C:/Users/PRANAV PRAKASH/Projects/EE224_CPU-IITB/CPU/Decoder_2_To_4.vhdl
+Z32 FC:/Users/PRANAV PRAKASH/Projects/EE224_CPU-IITB/CPU/Decoder_2_To_4.vhdl
 l0
 L4
 V@fDXGD^NQ^[T9ZgkoZ2AB0
 !s100 gkDLTffMU4V9[_LWFk7];3
 R7
 31
-Z32 !s110 1701695856
+R22
 !i10b 1
-Z33 !s108 1701695855.000000
-Z34 !s90 -reportprogress|300|-93|-work|work|C:/Users/harsh/GitHub Desktop/EE224_CPU-IITB/CPU/CPU/Decoder_2_To_4.vhdl|
-Z35 !s107 C:/Users/harsh/GitHub Desktop/EE224_CPU-IITB/CPU/CPU/Decoder_2_To_4.vhdl|
+R23
+Z33 !s90 -reportprogress|300|-93|-work|work|C:/Users/PRANAV PRAKASH/Projects/EE224_CPU-IITB/CPU/Decoder_2_To_4.vhdl|
+Z34 !s107 C:/Users/PRANAV PRAKASH/Projects/EE224_CPU-IITB/CPU/Decoder_2_To_4.vhdl|
 !i113 1
 R12
 R13
@@ -197,32 +197,32 @@ V3B7IB@@aeG=;0aA;U4mPO2
 !s100 `X:ShDJ10[V7?UPlR^D;b1
 R7
 31
-R32
+R22
 !i10b 1
+R23
 R33
 R34
-R35
 !i113 1
 R12
 R13
 Edecoder_3_to_8
-R1
+R26
 R3
 R4
 R0
-Z36 8C:/Users/harsh/GitHub Desktop/EE224_CPU-IITB/CPU/CPU/Decoder_3_To_8.vhdl
-Z37 FC:/Users/harsh/GitHub Desktop/EE224_CPU-IITB/CPU/CPU/Decoder_3_To_8.vhdl
+Z35 8C:/Users/PRANAV PRAKASH/Projects/EE224_CPU-IITB/CPU/Decoder_3_To_8.vhdl
+Z36 FC:/Users/PRANAV PRAKASH/Projects/EE224_CPU-IITB/CPU/Decoder_3_To_8.vhdl
 l0
 L4
 V?`8`aVNR]SeBLCh5mg8>40
 !s100 bRihZ87GEkNh=O8B1KdGF2
 R7
 31
-Z38 !s110 1701695854
+R22
 !i10b 1
-Z39 !s108 1701695854.000000
-Z40 !s90 -reportprogress|300|-93|-work|work|C:/Users/harsh/GitHub Desktop/EE224_CPU-IITB/CPU/CPU/Decoder_3_To_8.vhdl|
-Z41 !s107 C:/Users/harsh/GitHub Desktop/EE224_CPU-IITB/CPU/CPU/Decoder_3_To_8.vhdl|
+R23
+Z37 !s90 -reportprogress|300|-93|-work|work|C:/Users/PRANAV PRAKASH/Projects/EE224_CPU-IITB/CPU/Decoder_3_To_8.vhdl|
+Z38 !s107 C:/Users/PRANAV PRAKASH/Projects/EE224_CPU-IITB/CPU/Decoder_3_To_8.vhdl|
 !i113 1
 R12
 R13
@@ -236,33 +236,33 @@ VW@ON]Imk[z:^Feh8;oPXR2
 !s100 =l32CgSgN6GCmC_K<GGNY3
 R7
 31
-R38
+R22
 !i10b 1
-R39
-R40
-R41
+R23
+R37
+R38
 !i113 1
 R12
 R13
 Efsm
-R1
+Z39 w1705145404
 R2
 R3
 R4
 R0
-Z42 8C:/Users/harsh/GitHub Desktop/EE224_CPU-IITB/CPU/CPU/FSM.vhd
-Z43 FC:/Users/harsh/GitHub Desktop/EE224_CPU-IITB/CPU/CPU/FSM.vhd
+Z40 8C:/Users/PRANAV PRAKASH/Projects/EE224_CPU-IITB/CPU/FSM.vhd
+Z41 FC:/Users/PRANAV PRAKASH/Projects/EE224_CPU-IITB/CPU/FSM.vhd
 l0
 L5
-VDSV^oI8;B?C2GGD[kkk891
-!s100 jKfnNn18N66?1ozX^`UD33
+VfReXDnQZPKz`<<^2f272P1
+!s100 AFHWHii5LO[cjERLchzk>2
 R7
 31
-Z44 !s110 1701695853
+R22
 !i10b 1
-Z45 !s108 1701695852.000000
-Z46 !s90 -reportprogress|300|-93|-work|work|C:/Users/harsh/GitHub Desktop/EE224_CPU-IITB/CPU/CPU/FSM.vhd|
-Z47 !s107 C:/Users/harsh/GitHub Desktop/EE224_CPU-IITB/CPU/CPU/FSM.vhd|
+R23
+Z42 !s90 -reportprogress|300|-93|-work|work|C:/Users/PRANAV PRAKASH/Projects/EE224_CPU-IITB/CPU/FSM.vhd|
+Z43 !s107 C:/Users/PRANAV PRAKASH/Projects/EE224_CPU-IITB/CPU/FSM.vhd|
 !i113 1
 R12
 R13
@@ -270,40 +270,40 @@ Acontrol
 R2
 R3
 R4
-DEx4 work 3 fsm 0 22 DSV^oI8;B?C2GGD[kkk891
-l35
+DEx4 work 3 fsm 0 22 fReXDnQZPKz`<<^2f272P1
+l52
 L13
-ViabafNbA]^FKZezD5O<S_3
-!s100 XZ1FCokA`E8FD?CCn^<kQ0
+V@:CUK_7jA7G`a24F>im=]0
+!s100 cCHeEI3XiH@<>6jXMb>5Q1
 R7
 31
-R44
+R22
 !i10b 1
-R45
-R46
-R47
+R23
+R42
+R43
 !i113 1
 R12
 R13
 Eleft_shifter
-R1
+R26
 R2
 R3
 R4
 R0
-Z48 8C:/Users/harsh/GitHub Desktop/EE224_CPU-IITB/CPU/CPU/Left_Shifter.vhd
-Z49 FC:/Users/harsh/GitHub Desktop/EE224_CPU-IITB/CPU/CPU/Left_Shifter.vhd
+Z44 8C:/Users/PRANAV PRAKASH/Projects/EE224_CPU-IITB/CPU/Left_Shifter.vhd
+Z45 FC:/Users/PRANAV PRAKASH/Projects/EE224_CPU-IITB/CPU/Left_Shifter.vhd
 l0
 L5
 V>L1>048nU8TF8<QzBM=_l1
 !s100 1hjY<Uz1okZI2QU=8iiJR3
 R7
 31
-Z50 !s110 1701695849
+R22
 !i10b 1
-Z51 !s108 1701695849.000000
-Z52 !s90 -reportprogress|300|-93|-work|work|C:/Users/harsh/GitHub Desktop/EE224_CPU-IITB/CPU/CPU/Left_Shifter.vhd|
-Z53 !s107 C:/Users/harsh/GitHub Desktop/EE224_CPU-IITB/CPU/CPU/Left_Shifter.vhd|
+R23
+Z46 !s90 -reportprogress|300|-93|-work|work|C:/Users/PRANAV PRAKASH/Projects/EE224_CPU-IITB/CPU/Left_Shifter.vhd|
+Z47 !s107 C:/Users/PRANAV PRAKASH/Projects/EE224_CPU-IITB/CPU/Left_Shifter.vhd|
 !i113 1
 R12
 R13
@@ -318,33 +318,74 @@ Vc4bRn_SGd?Jm6Y6ea?mW?1
 !s100 1::]IL2OC_Dg:n_9_BkhO1
 R7
 31
-R50
+R22
 !i10b 1
-R51
-R52
-R53
+R23
+R46
+R47
 !i113 1
 R12
 R13
-Ememory
-R1
+Eleft_shifter_2mul
+Z48 w1705006204
 R2
 R3
 R4
 R0
-Z54 8C:/Users/harsh/GitHub Desktop/EE224_CPU-IITB/CPU/CPU/Memory.vhd
-Z55 FC:/Users/harsh/GitHub Desktop/EE224_CPU-IITB/CPU/CPU/Memory.vhd
+Z49 8C:/Users/PRANAV PRAKASH/Projects/EE224_CPU-IITB/CPU/Left_Shifter_2Mul.vhd
+Z50 FC:/Users/PRANAV PRAKASH/Projects/EE224_CPU-IITB/CPU/Left_Shifter_2Mul.vhd
+l0
+L5
+Vig>2Oj;G9V4_l9OURe@W]0
+!s100 M638Ef6B86C5^AEzc0D7F0
+R7
+31
+R8
+!i10b 1
+R9
+Z51 !s90 -reportprogress|300|-93|-work|work|C:/Users/PRANAV PRAKASH/Projects/EE224_CPU-IITB/CPU/Left_Shifter_2Mul.vhd|
+Z52 !s107 C:/Users/PRANAV PRAKASH/Projects/EE224_CPU-IITB/CPU/Left_Shifter_2Mul.vhd|
+!i113 1
+R12
+R13
+Astruct
+R2
+R3
+R4
+DEx4 work 17 left_shifter_2mul 0 22 ig>2Oj;G9V4_l9OURe@W]0
+l11
+L10
+VigD9zj]HHL]BCRoDR65El2
+!s100 ;PP?e=VnRea`bLU:_@[lm2
+R7
+31
+R8
+!i10b 1
+R9
+R51
+R52
+!i113 1
+R12
+R13
+Ememory
+Z53 w1705145490
+R2
+R3
+R4
+R0
+Z54 8C:/Users/PRANAV PRAKASH/Projects/EE224_CPU-IITB/CPU/Memory.vhd
+Z55 FC:/Users/PRANAV PRAKASH/Projects/EE224_CPU-IITB/CPU/Memory.vhd
 l0
 L5
 V_=;3UI0gI==S^QNV311Bo0
 !s100 o@6VbONWLzd6EGL7L[eo@2
 R7
 31
-Z56 !s110 1701695847
+R22
 !i10b 1
-Z57 !s108 1701695847.000000
-Z58 !s90 -reportprogress|300|-93|-work|work|C:/Users/harsh/GitHub Desktop/EE224_CPU-IITB/CPU/CPU/Memory.vhd|
-Z59 !s107 C:/Users/harsh/GitHub Desktop/EE224_CPU-IITB/CPU/CPU/Memory.vhd|
+R23
+Z56 !s90 -reportprogress|300|-93|-work|work|C:/Users/PRANAV PRAKASH/Projects/EE224_CPU-IITB/CPU/Memory.vhd|
+Z57 !s107 C:/Users/PRANAV PRAKASH/Projects/EE224_CPU-IITB/CPU/Memory.vhd|
 !i113 1
 R12
 R13
@@ -353,43 +394,43 @@ R2
 R3
 R4
 DEx4 work 6 memory 0 22 _=;3UI0gI==S^QNV311Bo0
-l60
+l73
 L13
-V[k_2Ta002cKVB@SAIbl<L1
-!s100 9:RKW<M>=5:0V2K@<TmV_3
+V[aDEYf<8JzGH;J_ei9ORc2
+!s100 BA5<Vn?OWYNV9eJ:@07MG2
 R7
 31
-R56
+R22
 !i10b 1
+R23
+R56
 R57
-R58
-R59
 !i113 1
 R12
 R13
 Pmux_p
 R3
 R4
-R1
+R26
 R0
-Z60 8C:/Users/harsh/GitHub Desktop/EE224_CPU-IITB/CPU/CPU/Generic_Mux.vhd
-Z61 FC:/Users/harsh/GitHub Desktop/EE224_CPU-IITB/CPU/CPU/Generic_Mux.vhd
+Z58 8C:/Users/PRANAV PRAKASH/Projects/EE224_CPU-IITB/CPU/Generic_Mux.vhd
+Z59 FC:/Users/PRANAV PRAKASH/Projects/EE224_CPU-IITB/CPU/Generic_Mux.vhd
 l0
 L4
 Vmf9cF?4H;AGZ_X;H>@V<g0
 !s100 hRDQ0E<>VWCXM5GN4Ibgk2
 R7
 31
-Z62 !s110 1701695851
+R22
 !i10b 1
-Z63 !s108 1701695851.000000
-Z64 !s90 -reportprogress|300|-93|-work|work|C:/Users/harsh/GitHub Desktop/EE224_CPU-IITB/CPU/CPU/Generic_Mux.vhd|
-Z65 !s107 C:/Users/harsh/GitHub Desktop/EE224_CPU-IITB/CPU/CPU/Generic_Mux.vhd|
+R23
+Z60 !s90 -reportprogress|300|-93|-work|work|C:/Users/PRANAV PRAKASH/Projects/EE224_CPU-IITB/CPU/Generic_Mux.vhd|
+Z61 !s107 C:/Users/PRANAV PRAKASH/Projects/EE224_CPU-IITB/CPU/Generic_Mux.vhd|
 !i113 1
 R12
 R13
 Bbody
-Z66 DPx4 work 5 mux_p 0 22 mf9cF?4H;AGZ_X;H>@V<g0
+Z62 DPx4 work 5 mux_p 0 22 mf9cF?4H;AGZ_X;H>@V<g0
 R3
 R4
 l0
@@ -398,39 +439,39 @@ VkWT4UO4G45WhK:R>Goe>A0
 !s100 =2ziZH]35JIgoSY:6jB4b3
 R7
 31
-R62
+R22
 !i10b 1
-R63
-R64
-R65
+R23
+R60
+R61
 !i113 1
 R12
 R13
 En_sel_mux
-R1
-R66
+R26
+R62
 R2
 R3
 R4
 R0
-R60
-R61
+R58
+R59
 l0
 L17
 VRX3I0:Z`;znXJ3;Qg`nKC2
 !s100 YMS7[cDJ36<fmi3MZDSC02
 R7
 31
-R62
+R22
 !i10b 1
-R63
-R64
-R65
+R23
+R60
+R61
 !i113 1
 R12
 R13
 Asyn
-R66
+R62
 R2
 R3
 R4
@@ -441,33 +482,33 @@ VJ:;lB4c2BDQb4QW@dkXWX1
 !s100 Fa:FJTei57=X3oElVn2aJ3
 R7
 31
-R62
+R22
 !i10b 1
-R63
-R64
-R65
+R23
+R60
+R61
 !i113 1
 R12
 R13
 Eregister_file
-R1
+R26
 R2
 R3
 R4
 R0
-Z67 8C:/Users/harsh/GitHub Desktop/EE224_CPU-IITB/CPU/CPU/Programmer_Register.vhd
-Z68 FC:/Users/harsh/GitHub Desktop/EE224_CPU-IITB/CPU/CPU/Programmer_Register.vhd
+Z63 8C:/Users/PRANAV PRAKASH/Projects/EE224_CPU-IITB/CPU/Programmer_Register.vhd
+Z64 FC:/Users/PRANAV PRAKASH/Projects/EE224_CPU-IITB/CPU/Programmer_Register.vhd
 l0
 L8
 VCDl2hIA36hD>lcDCn=8:72
 !s100 z?6RC45J>:?APd>XAbdlM2
 R7
 31
-Z69 !s110 1701695861
+R8
 !i10b 1
-Z70 !s108 1701695861.000000
-Z71 !s90 -reportprogress|300|-93|-work|work|C:/Users/harsh/GitHub Desktop/EE224_CPU-IITB/CPU/CPU/Programmer_Register.vhd|
-Z72 !s107 C:/Users/harsh/GitHub Desktop/EE224_CPU-IITB/CPU/CPU/Programmer_Register.vhd|
+R9
+Z65 !s90 -reportprogress|300|-93|-work|work|C:/Users/PRANAV PRAKASH/Projects/EE224_CPU-IITB/CPU/Programmer_Register.vhd|
+Z66 !s107 C:/Users/PRANAV PRAKASH/Projects/EE224_CPU-IITB/CPU/Programmer_Register.vhd|
 !i113 1
 R12
 R13
@@ -482,33 +523,33 @@ VmB9:B`3E?m177mT9A7J;02
 !s100 Og>a;Xc1iLS>SJ:=6GaI00
 R7
 31
-R69
+R8
 !i10b 1
-R70
-R71
-R72
+R9
+R65
+R66
 !i113 1
 R12
 R13
 Eregister_n
-R1
+R26
 R2
 R3
 R4
 R0
-Z73 8C:/Users/harsh/GitHub Desktop/EE224_CPU-IITB/CPU/CPU/Register.vhd
-Z74 FC:/Users/harsh/GitHub Desktop/EE224_CPU-IITB/CPU/CPU/Register.vhd
+Z67 8C:/Users/PRANAV PRAKASH/Projects/EE224_CPU-IITB/CPU/Register.vhd
+Z68 FC:/Users/PRANAV PRAKASH/Projects/EE224_CPU-IITB/CPU/Register.vhd
 l0
 L6
 Vj<]QDXi<3ZnHUozVUeBf92
 !s100 I<Gja8KCDT[W2I7UHozz=2
 R7
 31
-Z75 !s110 1701695845
+R22
 !i10b 1
-Z76 !s108 1701695845.000000
-Z77 !s90 -reportprogress|300|-93|-work|work|C:/Users/harsh/GitHub Desktop/EE224_CPU-IITB/CPU/CPU/Register.vhd|
-Z78 !s107 C:/Users/harsh/GitHub Desktop/EE224_CPU-IITB/CPU/CPU/Register.vhd|
+R23
+Z69 !s90 -reportprogress|300|-93|-work|work|C:/Users/PRANAV PRAKASH/Projects/EE224_CPU-IITB/CPU/Register.vhd|
+Z70 !s107 C:/Users/PRANAV PRAKASH/Projects/EE224_CPU-IITB/CPU/Register.vhd|
 !i113 1
 R12
 R13
@@ -523,32 +564,32 @@ V3dnS[nKR@dY?6?okgz;`U2
 !s100 A;R[O6Y4ccz0X<jH[[hf42
 R7
 31
-R75
+R22
 !i10b 1
-R76
-R77
-R78
+R23
+R69
+R70
 !i113 1
 R12
 R13
 Esigned_extender
-R1
+R26
 R3
 R4
 R0
-Z79 8C:/Users/harsh/GitHub Desktop/EE224_CPU-IITB/CPU/CPU/Signed_Extender.vhd
-Z80 FC:/Users/harsh/GitHub Desktop/EE224_CPU-IITB/CPU/CPU/Signed_Extender.vhd
+Z71 8C:/Users/PRANAV PRAKASH/Projects/EE224_CPU-IITB/CPU/Signed_Extender.vhd
+Z72 FC:/Users/PRANAV PRAKASH/Projects/EE224_CPU-IITB/CPU/Signed_Extender.vhd
 l0
 L4
 VB^4]1cD:JgNBOn?GMmVkV3
 !s100 `AmfikSIT;3F?@zM;XLj[3
 R7
 31
-Z81 !s110 1701695843
+R22
 !i10b 1
-Z82 !s108 1701695843.000000
-Z83 !s90 -reportprogress|300|-93|-work|work|C:/Users/harsh/GitHub Desktop/EE224_CPU-IITB/CPU/CPU/Signed_Extender.vhd|
-Z84 !s107 C:/Users/harsh/GitHub Desktop/EE224_CPU-IITB/CPU/CPU/Signed_Extender.vhd|
+Z73 !s108 1705145517.000000
+Z74 !s90 -reportprogress|300|-93|-work|work|C:/Users/PRANAV PRAKASH/Projects/EE224_CPU-IITB/CPU/Signed_Extender.vhd|
+Z75 !s107 C:/Users/PRANAV PRAKASH/Projects/EE224_CPU-IITB/CPU/Signed_Extender.vhd|
 !i113 1
 R12
 R13
@@ -562,50 +603,50 @@ Vj]L1ASNVNnC;nWln?k_3g1
 !s100 DVG8SamN4]KiXD2diHALf2
 R7
 31
-R81
+R22
 !i10b 1
-R82
-R83
-R84
+R73
+R74
+R75
 !i113 1
 R12
 R13
 Etestbench
-R1
+R26
 R3
 R4
 R0
-Z85 8C:/Users/harsh/GitHub Desktop/EE224_CPU-IITB/CPU/CPU/Testbench.vhd
-Z86 FC:/Users/harsh/GitHub Desktop/EE224_CPU-IITB/CPU/CPU/Testbench.vhd
+Z76 8C:/Users/PRANAV PRAKASH/Projects/EE224_CPU-IITB/CPU/Testbench.vhd
+Z77 FC:/Users/PRANAV PRAKASH/Projects/EE224_CPU-IITB/CPU/Testbench.vhd
 l0
 L4
 VL7N=bE4@XE?;`aNNSzSTL0
 !s100 =K:1DH_7Ch>TaEjF^>Un_3
 R7
 31
-R69
+R8
 !i10b 1
-R70
-Z87 !s90 -reportprogress|300|-93|-work|work|C:/Users/harsh/GitHub Desktop/EE224_CPU-IITB/CPU/CPU/Testbench.vhd|
-Z88 !s107 C:/Users/harsh/GitHub Desktop/EE224_CPU-IITB/CPU/CPU/Testbench.vhd|
+R9
+Z78 !s90 -reportprogress|300|-93|-work|work|C:/Users/PRANAV PRAKASH/Projects/EE224_CPU-IITB/CPU/Testbench.vhd|
+Z79 !s107 C:/Users/PRANAV PRAKASH/Projects/EE224_CPU-IITB/CPU/Testbench.vhd|
 !i113 1
 R12
 R13
 Abehavioural
 R3
 R4
-Z89 DEx4 work 9 testbench 0 22 L7N=bE4@XE?;`aNNSzSTL0
+Z80 DEx4 work 9 testbench 0 22 L7N=bE4@XE?;`aNNSzSTL0
 l15
 L7
-Z90 VMQKf<2Odiz_NhU?j:=;MX2
-Z91 !s100 Kha`EXl6l`47MMGQjO2F]2
+Z81 VMQKf<2Odiz_NhU?j:=;MX2
+Z82 !s100 Kha`EXl6l`47MMGQjO2F]2
 R7
 31
-R69
+R8
 !i10b 1
-R70
-R87
-R88
+R9
+R78
+R79
 !i113 1
 R12
 R13

@@ -36,24 +36,29 @@ architecture path of datapath is
 		port (input : in std_logic_vector (15 downto 0);
 				output : out std_logic_vector (15 downto 0));
 	end component Left_Shifter;
+	
+	component Left_Shifter_2Mul is
+		port (input : in std_logic_vector (15 downto 0);
+				output : out std_logic_vector (15 downto 0));
+	end component Left_Shifter_2Mul;
 
-	component Decoder_3_To_8 is
-		 port (
-			  I : in std_logic_vector(2 downto 0);
-			  O : out std_logic_vector(7 downto 0));
-	end component;
-
-	component Decoder_2_To_4 is
-		 port (
-			  I : in std_logic_vector(1 downto 0);
-			  O : out std_logic_vector(3 downto 0));
-	end component;
-
-	component Decoder_1_To_2 is
-		 port (
-			  I : in std_logic;
-			  O : out std_logic_vector(1 downto 0));
-	end component;
+--	component Decoder_3_To_8 is
+--		 port (
+--			  I : in std_logic_vector(2 downto 0);
+--			  O : out std_logic_vector(7 downto 0));
+--	end component;
+--
+--	component Decoder_2_To_4 is
+--		 port (
+--			  I : in std_logic_vector(1 downto 0);
+--			  O : out std_logic_vector(3 downto 0));
+--	end component;
+--
+--	component Decoder_1_To_2 is
+--		 port (
+--			  I : in std_logic;
+--			  O : out std_logic_vector(1 downto 0));
+--	end component;
 
 	component ALU is 
 		port (A, B: in std_logic_vector(15 downto 0);
@@ -84,25 +89,36 @@ architecture path of datapath is
 	constant s11 : std_logic_vector(3 downto 0):= "1011";
 	constant s12 : std_logic_vector(3 downto 0):= "1100";
 	constant s13 : std_logic_vector(3 downto 0):= "1101";
+	constant s14 : std_logic_vector(3 downto 0):= "1110";
+	constant s15 : std_logic_vector(3 downto 0):= "1111";
+
+	-- ALU
+	signal alu_a,alu_b,alu_c: std_logic_vector(15 downto 0);
+	signal alu_op: std_logic_vector(2 downto 0);
+	signal alu_fz: std_logic;
+
+	-- Memory
+	signal mem_addr,mem_in,mem_out: std_logic_vector(15 downto 0);
+	signal m_rd, m_wr: std_logic;
+
+	-- Register File
+	signal i_rfa1,i_rfa2,i_rfa3: std_logic_vector(2 downto 0);
+	signal o_rfd1,o_rfd2,i_rfd3: std_logic_vector(15 downto 0);
+	signal wenable_rf: std_logic;
+
+	-- Temporary Registers
+	signal wenable_ir,wenable_rega,wenable_regb,wenable_regc,wenable_reg_pc,wenable_reg3: std_logic;
+	signal i_reg3,o_reg3: std_logic_vector(2 downto 0);
+	signal i_ir,i_rega,i_regb,i_regc,i_reg_pc,o_ir,o_rega,o_regb,o_regc,o_reg_pc: std_logic_vector(15 downto 0);
 	
+	-- Sign Extenders	
 	signal i_se6: std_logic_vector(5 downto 0);
 	signal i_se9: std_logic_vector(8 downto 0);
-	signal o_de38: std_logic_vector(7 downto 0);
-	
-	signal o_se9,i_ls,o_se6,o_ls,i_rfd3,o_rfd1,o_rfd2: std_logic_vector(15 downto 0);
-	
-	-- 16-bit Temp Registers
-	signal i_reg16,i_reg16_2,i_reg16_3,i_reg16_4, o_reg16,o_reg16_2,o_reg16_3,o_reg16_4: std_logic_vector(15 downto 0);
-	-- 16-bit ALU signals
-	signal alu_a,alu_b,alu_c: std_logic_vector(15 downto 0);
-	-- 16-bit Memory signals
-	signal mem_addr,mem_in,mem_out: std_logic_vector(15 downto 0);
-	
-	signal i_reg3,o_reg3,i_de38,i_rfa3,i_rfa2,i_rfa1,alu_op: std_logic_vector(2 downto 0);
-	signal o_de24: std_logic_vector(3 downto 0);
-	signal o_de12,i_de24: std_logic_vector(1 downto 0);
-	signal wenable_reg16,wenable_reg16_2,wenable_reg16_3,wenable_reg16_4, wenable_reg3, wenable_rf, i_de12,alu_z,m_rd,m_wr: std_logic;
-	
+	signal o_se6,o_se9 : std_logic_vector(15 downto 0);
+
+	-- Left Shifter
+	signal i_ls1,o_ls1,i_ls8,o_ls8: std_logic_vector(15 downto 0);
+
 	begin
 		
 		se6: component Signed_Extender
@@ -112,287 +128,216 @@ architecture path of datapath is
 			generic map(input_size => 9)
 			port map(i_se9,o_se9);
 		
-		reg16_t1: component Register_N
-			port map(i_reg16, wenable_reg16, clk, o_reg16);
+		reg16_ir: component Register_N
+			port map(i_ir, wenable_ir, clk, o_ir);
 			
-		reg16_t2: component Register_N
-			port map(i_reg16_2, wenable_reg16_2, clk, o_reg16_2);
+		reg16_a: component Register_N
+			port map(i_rega, wenable_rega, clk, o_rega);
 		
-		reg16_t3: component Register_N
-			port map(i_reg16_3, wenable_reg16_3, clk, o_reg16_3);
+		reg16_b: component Register_N
+			port map(i_regb, wenable_regb, clk, o_regb);
 			
-		reg16_t4: component Register_N
-			port map(i_reg16_4, wenable_reg16_4, clk, o_reg16_4);
+		reg16_c: component Register_N
+			port map(i_regc, wenable_regc, clk, o_regc);
+			
+		reg16_pc: component Register_N
+			port map(i_reg_pc, wenable_reg_pc, clk, o_reg_pc);
 		
 		reg3: component Register_N
 			generic map(size=>3)
 			port map(i_reg3, wenable_reg3, clk, o_reg3);
 		
-		dec3to8: component Decoder_3_To_8
-			port map(i_de38,o_de38);
+		leftshift8: component Left_Shifter
+			port map(i_ls8,o_ls8);
 			
-		dec2to4: component Decoder_2_To_4
-			port map(i_de24,o_de24);
-		
-		dec1to2: component Decoder_1_To_2
-			port map(i_de12,o_de12);
-			
-		leftshift: component Left_Shifter
-			port map(i_ls,o_ls);
+		leftshift1: component Left_Shifter_2Mul
+			port map(i_ls1,o_ls1);
 			
 		rf: component Register_File
-			port map(i_rfa1,i_rfa2,i_rfa3, i_rfd3, o_rfd1,o_rfd2,clk,wenable_rf);
+			port map(i_rfa1,i_rfa2,i_rfa3, i_rfd3, o_rfd1, o_rfd2,clk,wenable_rf);
 			
 		alucomp: component ALU
-			port map(alu_a,alu_b,alu_op,alu_c,alu_z);
+			port map(alu_a,alu_b,alu_op,alu_c,alu_fz);
 		
 		mem: component Memory
 			port map(clk, m_wr, m_rd, mem_addr, mem_in, mem_out);
 			
-		opcode_out <= o_reg16(15 downto 12) when state /= s0 else mem_out(15 downto 12);
+		opcode_out <= o_ir(15 downto 12) when state /= s0 else mem_out(15 downto 12);
+		z_in <= alu_fz;
 		
-		datapath_process: process(state,o_rfd1,o_rfd2,mem_out,alu_c,alu_z,o_reg16,o_reg16_2,o_reg16_3,o_reg16_4,o_se6,o_se9,o_ls)
+		datapath_process: process(state,o_rfd1,o_rfd2,mem_out,alu_c,alu_fz,o_ir,o_rega,o_regb,o_regc,o_reg_pc,o_reg3,o_se6,o_se9,o_ls8,o_ls1)
 		begin
 			i_se6 <= (others => '0');
-			i_ls <= (others => '0');
-			i_rfd3 <= (others => '0');
-			i_reg16 <= (others => '0');
-			alu_a <= (others => '0');
-			alu_b <= (others => '0');
-			i_reg3 <= (others => '0');
-			i_de38 <= (others => '0');
+			i_se9 <= (others => '0');
+			
 			i_rfa3 <= (others => '0');
 			i_rfa2 <= (others => '0');
 			i_rfa1 <= (others => '0');
-			i_de24 <= (others => '0');
-			i_de12 <= '0';
-			i_se9 <= (others => '0');
+			i_rfd3 <= (others => '0');
+			
+			i_ls8 <= (others => '0');
+			i_ls1 <= (others => '0');
+			
+			alu_a <= (others => '0');
+			alu_b <= (others => '0');
+
+			i_ir <= (others => '0');
+			i_rega <= (others => '0');
+			i_regb <= (others => '0');
+			i_regc <= (others => '0');
+			i_reg_pc <= (others => '0');
+			i_reg3 <= (others => '0');
+			
+			-- Flags
+			alu_op <= (others => '0');
+			
+			wenable_rf <= '0';
+			wenable_ir <= '0';
+			wenable_rega <= '0';
+			wenable_regb <= '0';
+			wenable_regc <= '0';
+			wenable_reg_pc <= '0';
+			wenable_reg3 <= '0';
+			
+			m_rd <= '0';
+			m_wr <= '0';
 			
 			case state is
 				when s0 =>
 					i_rfa1 <= "111";
 					mem_addr <= o_rfd1;
-					i_reg16 <= mem_out;
+					i_ir <= mem_out;
 					alu_a <= o_rfd1;
-					alu_b <= "0000000000000010";
-					i_rfd3 <= alu_c;
-					i_rfa3 <= "111";
+					alu_b <= "0000000000000001";
+					i_reg_pc <= alu_c;
 					
-					wenable_rf <= '1';
-					wenable_reg3 <= '0';
-					wenable_reg16 <= '1';
-					wenable_reg16_2 <= '0';
-					wenable_reg16_3 <= '0';
-					wenable_reg16_4 <= '0';
+					wenable_ir <= '1';
 					m_rd <= '1';
-					m_wr <= '0';
+					wenable_reg_pc <= '1';
 					alu_op <= "000";
 				
 				when s1 =>
-					i_rfa1 <= o_reg16(11 downto 9);
-					i_rfa2 <= o_reg16(8 downto 6);
-					i_reg16_2 <= o_rfd1;
-					i_reg16_3 <= o_rfd2;
+					i_rfa1 <= o_ir(11 downto 9);
+					i_rfa2 <= o_ir(8 downto 6);
+					i_rega <= o_rfd1;
+					i_regb <= o_rfd2;
 					
-					wenable_rf <= '0';
-					wenable_reg3 <= '0';
-					wenable_reg16 <= '0';
-					wenable_reg16_2 <= '1';
-					wenable_reg16_3 <= '1';
-					wenable_reg16_4 <= '0';
-					m_rd <= '0';
-					m_wr <= '0';
-					alu_op <= "000";
+					wenable_rega <= '1';
+					wenable_regb <= '1';
 				
 				when s2 =>
-					alu_a <= o_reg16_2;
-					alu_b <= o_reg16_3;
-					i_reg16_4 <= alu_c;
-					i_reg3 <= o_reg16(5 downto 3);
+					alu_a <= o_rega;
+					alu_b <= o_regb;
+					i_regc <= alu_c;
+					i_reg3 <= o_ir(5 downto 3);
 					
-					wenable_rf <= '0';
 					wenable_reg3 <= '1';
-					wenable_reg16 <= '0';
-					wenable_reg16_2 <= '0';
-					wenable_reg16_3 <= '0';
-					wenable_reg16_4 <= '1';
-					m_rd <= '0';
-					m_wr <= '0';
-					alu_op <= o_reg16(14 downto 12);
+					wenable_regc <= '1';
+					alu_op <= o_ir(14 downto 12);
 				
 				when s3 =>
-					i_rfa3 <= o_reg3;
-					i_rfd3 <= o_reg16_4;
+					i_rfa3 <= "111";
+					i_rfd3 <= o_reg_pc;
 			
 					wenable_rf <= '1';
-					wenable_reg3 <= '0';
-					wenable_reg16 <= '0';
-					wenable_reg16_2 <= '0';
-					wenable_reg16_3 <= '0';
-					wenable_reg16_4 <= '0';
-					m_rd <= '0';
-					m_wr <= '0';
-					alu_op <= "000";
-				
-				when s4 =>
-					i_se6 <= o_reg16(5 downto 0);
-					alu_b <= o_se6;
-					alu_a <= o_reg16_2;
-					i_reg16_4 <= alu_c;
-					i_reg3 <= o_reg16(8 downto 6);
 					
-					wenable_rf <= '0';
-					wenable_reg3 <= '1';
-					wenable_reg16 <= '0';
-					wenable_reg16_2 <= '0';
-					wenable_reg16_3 <= '0';
-					wenable_reg16_4 <= '1';
-					m_rd <= '0';
-					m_wr <= '0';
-					alu_op <= "000";
+				when s4 =>
+					i_rfa3 <= o_reg3;
+					i_rfd3 <= o_regc;
+			
+					wenable_rf <= '1';
 				
 				when s5 =>
-					alu_b <= o_reg16_3;
-					i_se6 <= o_reg16(5 downto 0);
-					alu_a <= o_se6;
-					i_reg16_4 <= alu_c;
+					i_se6 <= o_ir(5 downto 0);
+					alu_b <= o_se6;
+					alu_a <= o_rega;
+					i_regc <= alu_c;
+					i_reg3 <= o_ir(8 downto 6);
 					
-					wenable_rf <= '0';
-					wenable_reg3 <= '0';
-					wenable_reg16 <= '0';
-					wenable_reg16_2 <= '0';
-					wenable_reg16_3 <= '0';
-					wenable_reg16_4 <= '1';
-					m_rd <= '0';
-					m_wr <= '0';
-					alu_op <= "000";
-					
-				when s6 =>
-					mem_addr <= o_reg16_4;
-					i_reg16_4 <= mem_out;
-					i_reg3 <= o_reg16(11 downto 9);
-					
-					wenable_rf <= '0';
 					wenable_reg3 <= '1';
-					wenable_reg16 <= '0';
-					wenable_reg16_2 <= '0';
-					wenable_reg16_3 <= '0';
-					wenable_reg16_4 <= '1';
-					m_rd <= '0';
-					m_wr <= '0';
+					wenable_regc <= '1';
+					alu_op <= "000";
+				
+				when s6 =>
+					alu_b <= o_regb;
+					i_se6 <= o_ir(5 downto 0);
+					alu_a <= o_se6;
+					i_regc <= alu_c;
+					
+					wenable_regc <= '1';
 					alu_op <= "000";
 					
 				when s7 =>
-					mem_addr <= o_reg16_4;
-					mem_in <= o_reg16_2;
+					i_rfa3 <= o_ir(11 downto 9);
+					mem_addr <= o_regc;
+					i_rfd3 <= mem_out;
 					
-					wenable_rf <= '0';
-					wenable_reg3 <= '0';
-					wenable_reg16 <= '0';
-					wenable_reg16_2 <= '0';
-					wenable_reg16_3 <= '0';
-					wenable_reg16_4 <= '0';
-					m_rd <= '0';
-					m_wr <= '1';
-					alu_op <= "000";
-				
+					wenable_rf <= '1';
+					m_rd <= '1';
+					
 				when s8 =>
-					alu_a <= o_reg16_2;
-					alu_b <= o_reg16_3;
-					i_reg16_4 <= alu_c;
-					z_in <= alu_z;
-					i_reg3 <= o_reg16(5 downto 3);
+					mem_addr <= o_regc;
+					mem_in <= o_rega;
 					
-					wenable_rf <= '0';
-					wenable_reg3 <= '1';
-					wenable_reg16 <= '0';
-					wenable_reg16_2 <= '0';
-					wenable_reg16_3 <= '0';
-					wenable_reg16_4 <= '1';
-					m_rd <= '0';
-					m_wr <= '0';
-					alu_op <= "001";
+					m_wr <= '1';
 				
 				when s9 =>
-					i_rfa1 <= "111";
-					alu_a <= o_rfd1;
-					i_se6 <= o_reg16(5 downto 0);
-					i_ls <= o_se6;
-					alu_b <= o_ls;
-					i_rfd3 <= alu_c;
-					i_rfa3 <= "111";
+					i_se9 <= o_ir(8 downto 0);
+					i_ls8 <= o_se9;
+					i_regc <= o_ls8;
+					i_reg3 <= o_ir(11 downto 9);
 					
-					wenable_rf <= '1';
-					wenable_reg3 <= '0';
-					wenable_reg16 <= '0';
-					wenable_reg16_2 <= '0';
-					wenable_reg16_3 <= '0';
-					wenable_reg16_4 <= '0';
-					m_rd <= '0';
-					m_wr <= '0';
-					alu_op <= "000";
-				
+					wenable_reg3 <= '1';
+					wenable_regc <= '1';
+					
 				when s10 =>
-					i_rfa1 <= "111";
-					i_rfa3 <= o_reg16(11 downto 9);
-					i_rfd3 <= o_rfd1;
+					i_se9 <= o_ir(8 downto 0);
+					i_regc <= o_se9;
+					i_reg3 <= o_ir(11 downto 9);
 					
-					wenable_rf <= '1';
-					wenable_reg3 <= '0';
-					wenable_reg16 <= '0';
-					wenable_reg16_2 <= '0';
-					wenable_reg16_3 <= '0';
-					wenable_reg16_4 <= '0';
-					m_rd <= '0';
-					m_wr <= '0';
-					alu_op <= "000";
-				
+					wenable_reg3 <= '1';
+					wenable_regc <= '1';
+					
 				when s11 =>
-					i_rfa2 <= o_reg16(8 downto 6);
-					i_rfd3 <= o_rfd2;
-					i_rfa1 <= "111";
-					i_rfa3 <= "111";
+					i_se9 <= o_ir(8 downto 0);
+					i_ls1 <= o_se9;
+					i_regc <= o_ls1;
 					
-					wenable_rf <= '1';
-					wenable_reg3 <= '0';
-					wenable_reg16 <= '0';
-					wenable_reg16_2 <= '0';
-					wenable_reg16_3 <= '0';
-					wenable_reg16_4 <= '0';
-					m_rd <= '0';
-					m_wr <= '0';
-					alu_op <= "000";
+					wenable_regc <= '1';
 					
 				when s12 =>
-					i_se9 <= o_reg16(8 downto 0);
-					i_ls <= o_se9;
-					i_reg16_4 <= o_ls;
-					i_reg3 <= o_reg16(11 downto 9);
+					i_rfa1 <= "111";
+					alu_a <= o_rfd1;
+					alu_b <= o_regc;
+					i_reg_pc <= alu_c;
+					i_regc <= o_rfd1;
+					i_reg3 <= o_ir(11 downto 9);
 					
-					wenable_rf <= '0';
+					wenable_reg_pc <= '1';
+					wenable_regc <= '1';
 					wenable_reg3 <= '1';
-					wenable_reg16 <= '0';
-					wenable_reg16_2 <= '0';
-					wenable_reg16_3 <= '0';
-					wenable_reg16_4 <= '1';
-					m_rd <= '0';
-					m_wr <= '0';
 					alu_op <= "000";
 					
 				when s13 =>
-					i_se9 <= o_reg16(8 downto 0);
-					i_reg16_4 <= o_se9;
-					i_reg3 <= o_reg16(11 downto 9);
+					i_rfa2 <= o_ir(8 downto 6);
+					i_reg_pc <= o_rfd2;
+					i_reg3 <= o_ir(11 downto 9);
 					
-					wenable_rf <= '0';
+					wenable_reg_pc <= '1';
 					wenable_reg3 <= '1';
-					wenable_reg16 <= '0';
-					wenable_reg16_2 <= '0';
-					wenable_reg16_3 <= '0';
-					wenable_reg16_4 <= '1';
-					m_rd <= '0';
-					m_wr <= '0';
-					alu_op <= "000";
+					
+				when s14 =>
+					alu_a <= o_rega;
+					alu_b <= o_regb;
+					
+					alu_op <= "010"; -- Sub
+					
+				when s15 =>
+					i_se6 <= o_ir(5 downto 0);
+					i_ls1 <= o_se6;
+					i_regc <= o_ls1;
+					
+					wenable_regc <= '1';
 					
 				when others =>
 					alu_op <= "000";
